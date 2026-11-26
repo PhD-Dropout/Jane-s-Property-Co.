@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jane’s Property Co. | Homes for Sale and Rent in Nairobi</title>
+<meta name="description" content="Jane’s Property Co., Upper Hill, Nairobi. Homes, apartments and villas for sale and rent. Book a viewing on WhatsApp.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#faf8f3;--surface:#fff;--ink:#1b2b27;--muted:#5f6d68;--brand:#1f4a40;--brand-ink:#fff;--gold:#d9a22b;--line:#e4e0d5;--deep:#16342d;--deep-ink:#faf8f3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1815;--surface:#16231f;--ink:#f1efe8;--muted:#9fb0aa;--brand:#e3b341;--brand-ink:#16342d;--gold:#e3b341;--line:#273833;--deep:#0a1210;--deep-ink:#f1efe8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1815;--surface:#16231f;--ink:#f1efe8;--muted:#9fb0aa;--brand:#e3b341;--brand-ink:#16342d;--gold:#e3b341;--line:#273833;--deep:#0a1210;--deep-ink:#f1efe8;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.12;margin:0}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--deep);color:var(--deep-ink);border-bottom:1px solid #ffffff1a}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 19px "DM Serif Display",serif}
+.logo svg{width:30px;height:30px}
+nav{display:flex;gap:20px;font-size:14px}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1}
+.hbtns{display:flex;gap:8px;align-items:center}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);border:0;border-radius:10px;padding:12px 20px;text-decoration:none;cursor:pointer;font:700 15px "DM Sans",sans-serif}
+.btn.gold{background:var(--gold);color:#16342d}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn.sm{padding:8px 14px;font-size:14px}
+.icon{background:transparent;border:1px solid #ffffff40;color:inherit;border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:18px}
+.hero{background:var(--deep);color:var(--deep-ink);padding:60px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(38px,7vw,72px);max-width:13ch}
+.hero p{max-width:50ch;opacity:.85;font-size:18px;margin:18px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sky{display:block;width:100%;height:auto;margin-top:36px}
+.search{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:-34px;position:relative;box-shadow:0 10px 30px #0002}
+label{font-size:13px;color:var(--muted);display:block;margin-bottom:4px}
+select,input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{padding:60px 0}
+h2{font-size:clamp(28px,4.5vw,42px);margin-bottom:10px}
+.lead{color:var(--muted);max-width:58ch;margin:0 0 26px}
+.bar{display:flex;gap:10px;justify-content:space-between;align-items:end;flex-wrap:wrap;margin-bottom:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:6px 14px;font:500 14px "DM Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ph{height:170px;position:relative;cursor:pointer}
+.ph svg{width:100%;height:100%;display:block}
+.ph .t{position:absolute;left:12px;bottom:10px;color:#fff;font-size:13px;font-weight:700;background:#0008;padding:3px 10px;border-radius:99px}
+.heart{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;border:0;background:#fffe;color:#16342d;font-size:18px;cursor:pointer}
+.card .b{padding:14px 16px 18px;cursor:pointer;flex:1}
+.card h3{font-size:22px}
+.tag{font-size:13px;font-weight:700;color:var(--brand)}
+.price{font:400 22px "DM Serif Display",serif;margin:6px 0 2px}
+.meta{color:var(--muted);font-size:14px}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.hoods{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.hood{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:left;cursor:pointer;color:var(--ink);font:inherit}
+.hood b{font:400 22px "DM Serif Display",serif;display:block}
+.hood span{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;counter-reset:s;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:3px solid var(--gold);padding-top:12px}
+.steps li::before{content:"Step " counter(s);font-size:13px;color:var(--muted)}
+.steps h3{font-size:21px;margin:2px 0 6px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.f{display:grid;gap:12px}
+.out dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:8px 12px;font-size:15px}
+.out dt{color:var(--muted)}.out dd{margin:0;font-weight:700;text-align:right}
+.big{font:400 38px "DM Serif Display",serif;margin:0 0 12px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.contact ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.contact li span{display:block;font-size:13px;color:var(--muted)}
+form{display:grid;gap:12px}
+.band{background:var(--deep);color:var(--deep-ink)}
+.band .lead{color:inherit;opacity:.85}
+footer{background:var(--deep);color:var(--deep-ink);padding:26px 0;font-size:14px;border-top:1px solid #ffffff1a}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 6px 18px #0005}
+dialog{border:0;border-radius:18px;padding:0;max-width:520px;width:calc(100% - 28px);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:#000a}
+dialog .ph{cursor:default;height:200px}
+dialog .in{padding:20px;display:grid;gap:10px}
+.x{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;border:0;background:#fffe;color:#16342d;font-size:18px;cursor:pointer}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}.edit{position:absolute;left:10px;top:10px;border:0;border-radius:99px;background:#fffe;color:#16342d;font:700 12px "DM Sans",sans-serif;padding:6px 12px;cursor:pointer}.stat{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:7;background:var(--deep);color:var(--deep-ink);padding:8px 14px;border-radius:10px;font-size:14px}.empty{grid-column:1/-1;color:var(--muted)}
+@media (max-width:700px){nav{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#d9a22b"/><path d="M6 15 16 7l10 8v10h-5V16l-5-4-5 4v9H6z" fill="#16342d"/></svg>Jane’s Property Co.</a>
+<nav><a href="#properties">Properties</a><a href="#areas">Areas</a><a href="#process">How it works</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<div class="hbtns"><button class="icon" id="theme" aria-label="Toggle light or dark mode">◐</button><a class="btn gold sm" href="tel:+254706045269">Call</a></div>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Your next home, handled with care.</h1>
+<p>Homes, apartments and villas for sale and rent across Nairobi, with clear advice from first viewing to handover. Office in Upper Hill.</p>
+<div class="cta"><a class="btn gold" href="#properties">Browse properties</a><a class="btn ghost" href="#contact">Book a viewing</a></div>
+<svg class="sky" viewBox="0 0 1000 150" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#1f4a40"><rect x="0" y="90" width="90" height="60"/><rect x="100" y="50" width="70" height="100"/><rect x="180" y="75" width="60" height="75"/><rect x="250" y="30" width="80" height="120"/><rect x="340" y="80" width="90" height="70"/><rect x="440" y="55" width="60" height="95"/><rect x="510" y="20" width="75" height="130"/><rect x="595" y="70" width="80" height="80"/><rect x="685" y="45" width="70" height="105"/><rect x="765" y="85" width="90" height="65"/><rect x="865" y="60" width="70" height="90"/><rect x="945" y="95" width="55" height="55"/></g><g fill="#d9a22b" opacity=".85"><rect x="262" y="45" width="8" height="8"/><rect x="290" y="70" width="8" height="8"/><rect x="527" y="40" width="8" height="8"/><rect x="552" y="80" width="8" height="8"/><rect x="115" y="70" width="8" height="8"/><rect x="700" y="65" width="8" height="8"/></g><rect y="148" width="1000" height="2" fill="#faf8f3"/></svg>
+</div></div>
+
+<div class="wrap"><div class="search" role="search">
+<div><label for="fType">Type</label><select id="fType"><option value="">Any type</option><option>Apartment</option><option>House</option><option>Townhouse</option><option>Villa</option></select></div>
+<div><label for="fPurpose">Purpose</label><select id="fPurpose"><option value="">Buy or rent</option><option>For sale</option><option>For rent</option></select></div>
+<div><label for="fArea">Area</label><select id="fArea"><option value="">All Nairobi</option></select></div>
+<div><label for="fBudget">Max budget (KES)</label><input id="fBudget" type="number" min="0" inputmode="numeric" placeholder="e.g. 20000000"></div>
+</div></div>
+
+<section id="properties"><div class="wrap">
+<div class="bar"><div><h2>Featured properties</h2><p class="lead" style="margin:0">Tap a home for details, or save it with the heart.</p></div>
+<div class="chips" id="modes"><button class="chip" data-m="all" aria-pressed="true">All</button><button class="chip" data-m="saved" aria-pressed="false">Saved <span id="sc">0</span></button></div>
+<div><label for="sort">Sort by</label><select id="sort"><option value="f">Featured</option><option value="a">Price: low to high</option><option value="d">Price: high to low</option><option value="b">Most bedrooms</option></select></div></div>
+<div class="grid" id="list"></div>
+<p class="note">These are sample listings. Replace them with your own properties and photos before sharing the site widely.</p>
+</div></section>
+
+<section id="areas" style="background:var(--surface)"><div class="wrap">
+<h2>Where we work</h2>
+<p class="lead">Pick a neighbourhood to see matching homes.</p>
+<div class="hoods" id="hoods"></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>From viewing to keys in five steps</h2>
+<p class="lead">Buying property should feel safe. Every step is explained and documented.</p>
+<ol class="steps">
+<li><h3>Discovery call</h3><p>Budget, location, timeline and financing. We shortlist only what fits.</p></li>
+<li><h3>Guided viewings</h3><p>In person or by video, with honest pros and cons.</p></li>
+<li><h3>Due diligence</h3><p>Your advocate runs an official land search and checks the title before any payment.</p></li>
+<li><h3>Offer and agreement</h3><p>We negotiate for you. Lawyers draft and review the agreement.</p></li>
+<li><h3>Transfer and handover</h3><p>Stamp duty, registration, then keys and title in your hands.</p></li>
+</ol></div></section>
+
+<section id="calculator" style="background:var(--surface)"><div class="wrap">
+<h2>Mortgage and cost calculator</h2>
+<p class="lead">Estimate your monthly payment and the cash you need upfront. Open any sale listing and choose “Use in calculator” to fill in its price.</p>
+<div class="calc">
+<div class="f">
+<div><label for="cPrice">Property price (KES)</label><input id="cPrice" type="number" value="15000000" min="0"></div>
+<div><label for="cDep">Deposit (%)</label><input id="cDep" type="number" value="20" min="0" max="100"></div>
+<div><label for="cRate">Interest rate (% per year)</label><input id="cRate" type="number" value="13" step="0.1" min="0"></div>
+<div><label for="cYrs">Loan term (years)</label><input id="cYrs" type="number" value="20" min="1" max="35"></div>
+</div>
+<div class="out"><p class="big" id="oMonthly">—</p>
+<dl><dt>Loan amount</dt><dd id="oLoan">—</dd><dt>Total interest</dt><dd id="oInt">—</dd><dt>Deposit</dt><dd id="oDep">—</dd><dt>Stamp duty (4%)</dt><dd id="oStamp">—</dd><dt>Legal fees (about 1.5%)</dt><dd id="oLegal">—</dd><dt>Cash needed upfront</dt><dd id="oCash">—</dd></dl>
+<p class="note">Estimates only. Confirm figures with your bank and advocate.</p></div>
+</div></div></section>
+
+<section class="band"><div class="wrap">
+<h2>Real estate with trust at the centre.</h2>
+<p class="lead">We connect families, professionals and investors with carefully selected homes. Clear, professional and personal, from first enquiry to final transaction.</p>
+<a class="btn gold" href="https://wa.me/254706045269?text=Hello%20Jane%E2%80%99s%20Property%20Co.%2C%20I%20would%20like%20to%20enquire%20about%20a%20property.">Chat on WhatsApp</a>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<div><h2>Let’s talk property.</h2>
+<p class="lead">Tell us what you are looking for. We reply on WhatsApp, usually within the day.</p>
+<ul>
+<li><span>WhatsApp / Phone</span><a href="tel:+254706045269">+254 706 045269</a></li>
+<li><span>Office</span>Upper Hill, Nairobi</li>
+<li><span>Hours</span>Mon – Sat, 8:00 – 18:00</li>
+<li><a href="https://www.google.com/maps/search/?api=1&query=Upper%20Hill%2C%20Nairobi">Open in Google Maps</a></li>
+</ul></div>
+<form id="form">
+<div><label for="qName">Your name</label><input id="qName" required></div>
+<div><label for="qPhone">Phone / WhatsApp</label><input id="qPhone" type="tel"></div>
+<div><label for="qInt">Interested in</label><select id="qInt"><option>Villa</option><option>Apartment</option><option>House</option><option>Property for rent</option><option>Investment</option></select></div>
+<div><label for="qBud">Budget (KES)</label><input id="qBud"></div>
+<div><label for="qMsg">Message</label><textarea id="qMsg" rows="3"></textarea></div>
+<button class="btn" type="submit">Send on WhatsApp</button>
+</form></div></section>
+
+<section id="faq" style="background:var(--surface)"><div class="wrap">
+<h2>Questions buyers ask us</h2><br>
+<details><summary>Can foreigners and diaspora buyers purchase property in Kenya?</summary><p>Yes. Non-citizens can own buildings and leasehold land of up to 99 years. Freehold agricultural land has restrictions. An advocate can handle a purchase remotely.</p></details>
+<details><summary>How do I know a title is genuine?</summary><p>Your advocate runs an official search at the Ministry of Lands and checks approvals before any deposit is paid.</p></details>
+<details><summary>What extra costs should I budget for?</summary><p>Stamp duty (4% in urban areas, 2% rural), legal fees, valuation and registration fees. The calculator above gives an estimate.</p></details>
+<details><summary>Do you help with mortgages?</summary><p>Yes. We introduce you to banks and mortgage advisors and help you compare offers.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Jane’s Property Co. · Upper Hill, Nairobi · <a href="tel:+254706045269">+254 706 045269</a></div></footer>
+<a class="btn gold wa" href="https://wa.me/254706045269" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<input type="file" id="pick" accept="image/*" hidden>
+<div class="stat" id="stat" hidden></div>
+<script type="application/json" id="photos">{}</script>
+<dialog id="dlg"><div class="ph" id="dph"><button class="x" id="dx" aria-label="Close">✕</button></div><div class="in" id="din"></div></dialog>
+
+<script>
+var P=[
+{n:"Garden Court Apartment",t:"Apartment",p:"For sale",a:"Kilimani",b:2,ba:2,v:11500000,c:["#2f6b5a","#d9a22b"]},
+{n:"Acacia Family House",t:"House",p:"For sale",a:"Ruiru",b:4,ba:3,v:18500000,c:["#7a5a3a","#e8c27a"]},
+{n:"Hillview Villa",t:"Villa",p:"For sale",a:"Karen",b:5,ba:5,v:62000000,c:["#2c4c6b","#9fc3e0"]},
+{n:"City Studio Loft",t:"Apartment",p:"For rent",a:"Westlands",b:1,ba:1,v:55000,c:["#5b3f55","#e0b0d0"]},
+{n:"Maple Townhouse",t:"Townhouse",p:"For rent",a:"Lavington",b:3,ba:3,v:130000,c:["#4d6b2f","#cfe39a"]},
+{n:"Sunrise Residence",t:"House",p:"For sale",a:"Kileleshwa",b:3,ba:2,v:27000000,c:["#8a4a3a","#f0b9a0"]}];
+var SRC="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
+var photos={};try{photos=JSON.parse(document.getElementById("photos").textContent)||{}}catch(e){}
+var mode="all",saved=[],$=function(i){return document.getElementById(i)};
+try{saved=JSON.parse(localStorage.getItem("saved")||"[]")}catch(e){}
+function keep(){try{localStorage.setItem("saved",JSON.stringify(saved))}catch(e){}}
+P.forEach(function(x,i){x.i=i});
+var assets=null,artifact=null,owner=false,target=-1;
+function fmt(n){return "KES "+Math.round(n).toLocaleString("en-KE")}
+function art(x){var u=photos[x.i];if(u&&u.indexOf("/_blob/")===0)return '<img src="'+u+'" alt="'+x.n+'" loading="lazy">';return '<svg viewBox="0 0 300 170" preserveAspectRatio="xMidYMid slice"><rect width="300" height="170" fill="'+x.c[0]+'"/><circle cx="245" cy="42" r="20" fill="'+x.c[1]+'"/><rect y="130" width="300" height="40" fill="#0003"/><path d="M70 130V80l50-34 50 34v50z" fill="#fff" opacity=".92"/><rect x="108" y="98" width="24" height="32" fill="'+x.c[0]+'"/><rect x="150" y="92" width="14" height="14" fill="'+x.c[1]+'"/></svg>'}
+var areas=[];P.forEach(function(x){if(areas.indexOf(x.a)<0)areas.push(x.a)});areas.sort();
+areas.forEach(function(a){fArea.insertAdjacentHTML("beforeend","<option>"+a+"</option>")});
+$("hoods").innerHTML=areas.map(function(a){var k=P.filter(function(x){return x.a===a}).length;return '<button class="hood" data-a="'+a+'"><b>'+a+'</b><span>'+k+(k>1?" homes":" home")+'</span></button>'}).join("");
+$("hoods").addEventListener("click",function(e){var h=e.target.closest(".hood");if(!h)return;fArea.value=h.dataset.a;render();$("properties").scrollIntoView()});
+function render(){
+var ty=fType.value,pu=fPurpose.value,ar=fArea.value,bu=+fBudget.value||0,s=sort.value;
+var L=P.map(function(x,i){x.i=i;return x}).filter(function(x){return !((ty&&x.t!==ty)||(pu&&x.p!==pu)||(ar&&x.a!==ar)||(bu&&x.v>bu)||(mode==="saved"&&saved.indexOf(x.i)<0))});
+if(s==="a")L.sort(function(a,b){return a.v-b.v});if(s==="d")L.sort(function(a,b){return b.v-a.v});if(s==="b")L.sort(function(a,b){return b.b-a.b});
+$("list").innerHTML=L.length?L.map(function(x){var on=saved.indexOf(x.i)>=0;
+return '<article class="card"><div class="ph" data-o="'+x.i+'">'+art(x)+(owner?'<button class="edit" data-e="'+x.i+'">'+(photos[x.i]?"Change photo":"Add photo")+'</button>':'')+'<span class="t">'+x.t+'</span><button class="heart" data-h="'+x.i+'" aria-label="Save '+x.n+'" aria-pressed="'+on+'">'+(on?"♥":"♡")+'</button></div><div class="b" data-o="'+x.i+'"><span class="tag">'+x.p+'</span><h3>'+x.n+'</h3><div class="price">'+fmt(x.v)+(x.p==="For rent"?" / month":"")+'</div><div class="meta">'+x.a+' · '+x.b+' bed · '+x.ba+' bath</div></div></article>'}).join(""):'<p class="empty">No properties match. Try a higher budget, another area or a different type.</p>';
+$("sc").textContent=saved.length}
+["input","change"].forEach(function(ev){[fType,fPurpose,fArea,fBudget,sort].forEach(function(e){e.addEventListener(ev,render)})});
+$("modes").addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;mode=b.dataset.m;[].forEach.call(document.querySelectorAll("#modes .chip"),function(c){c.setAttribute("aria-pressed",c===b)});render()});
+$("list").addEventListener("click",function(e){
+var h=e.target.closest("[data-h]");
+if(h){var i=+h.dataset.h,k=saved.indexOf(i);if(k<0)saved.push(i);else saved.splice(k,1);keep();render();return}
+var ed=e.target.closest("[data-e]");if(ed){e.stopPropagation();ask(+ed.dataset.e);return}
+var o=e.target.closest("[data-o]");if(o)openD(+o.dataset.o)});
+function openD(i){var x=P[i];
+$("dph").innerHTML=art(x)+'<button class="x" id="dx" aria-label="Close">✕</button>';
+var msg=encodeURIComponent("Hello Jane’s Property Co., I would like to book a viewing for "+x.n+" ("+x.a+").");
+$("din").innerHTML='<span class="tag">'+x.p+' · '+x.t+'</span><h3 style="font-size:28px">'+x.n+'</h3><div class="price">'+fmt(x.v)+(x.p==="For rent"?" / month":"")+'</div><div class="meta">'+x.a+', Nairobi · '+x.b+' bed · '+x.ba+' bath</div><div class="cta" style="margin-top:6px"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/254706045269?text='+msg+'">Book a viewing</a>'+(x.p==="For sale"?'<button class="btn ghost" id="uc" data-v="'+x.v+'">Use in calculator</button>':'')+'</div>'+(owner?'<div class="cta"><button class="btn ghost sm" data-e="'+i+'">'+(photos[i]?"Change photo":"Add photo")+'</button>'+(photos[i]?'<button class="btn ghost sm" data-r="'+i+'">Remove photo</button>':'')+'</div>':'');
+dlg.showModal()}
+dlg.addEventListener("click",function(e){
+if(e.target.id==="dx"||e.target===dlg)dlg.close();
+var d1=e.target.closest("[data-e]");if(d1){ask(+d1.dataset.e);return}var d2=e.target.closest("[data-r]");if(d2){delete photos[+d2.dataset.r];dlg.close();save("Photo removed");return}
+if(e.target.id==="uc"){cPrice.value=e.target.dataset.v;calc();dlg.close();$("calculator").scrollIntoView()}});
+function calc(){
+var pr=+cPrice.value||0,d=(+cDep.value||0)/100*pr,L=pr-d,r=(+cRate.value||0)/1200,n=(+cYrs.value||1)*12;
+var m=r?L*r/(1-Math.pow(1+r,-n)):L/n;
+oMonthly.textContent=fmt(m)+" / month";oLoan.textContent=fmt(L);oInt.textContent=fmt(m*n-L);oDep.textContent=fmt(d);
+oStamp.textContent=fmt(pr*.04);oLegal.textContent=fmt(pr*.015);oCash.textContent=fmt(d+pr*.04+pr*.015)}
+[cPrice,cDep,cRate,cYrs].forEach(function(e){e.addEventListener("input",calc)});
+form.addEventListener("submit",function(e){e.preventDefault();
+var t="Hello Jane’s Property Co.. Name: "+qName.value+(qPhone.value?", Phone: "+qPhone.value:"")+". Interested in: "+qInt.value+(qBud.value?", Budget: KES "+qBud.value:"")+(qMsg.value?". "+qMsg.value:"");
+window.open("https://wa.me/254706045269?text="+encodeURIComponent(t),"_blank")});
+$("theme").addEventListener("click",function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")});
+function say(t){stat.textContent=t;stat.hidden=!t}
+function ask(i){target=i;pick.value="";pick.click()}
+function shrink(f){return new Promise(function(ok){var im=new Image(),u=URL.createObjectURL(f);im.onload=function(){var m=1400,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);c.toBlob(function(b){URL.revokeObjectURL(u);ok(b||f)},"image/jpeg",.85)};im.onerror=function(){ok(f)};im.src=u})}
+pick.addEventListener("change",async function(){var f=pick.files[0];if(!f||target<0)return;
+try{say("Uploading photo…");var b=await shrink(f);var r=await assets.upload(b);photos[target]=r.url;dlg.close();await save("Photo saved")}catch(err){say("Upload failed. Try a smaller image.");setTimeout(function(){say("")},3500)}});
+async function save(msg){try{say("Saving…");var j=JSON.stringify(photos).replace(/</g,"\\u003c");
+var h=SRC.replace(/(<script type="application\/json" id="photos">)[\s\S]*?(<\/script>)/,function(m,a,b){return a+j+b});
+await artifact.publish(h)}catch(err){say("Could not save. Try again.");setTimeout(function(){say("")},3500)}}
+(async function(){try{assets=await claude.use("assets");artifact=await claude.use("artifact");owner=!!(assets&&artifact);if(owner)render()}catch(e){}})();
+render();calc();
+</script>
+</body>
+</html>
